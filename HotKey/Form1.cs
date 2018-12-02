@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
 using System.Threading;
-
+using musicPlayClass;
 
 
 namespace WindowsFormsApp1
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
                 Thread.Sleep(40);
                 if((Keyboard.GetKeyStates(Key.A) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.S) & KeyStates.Down) > 0)
                 {
-
+                    new musicPalyClass().Play();
                 }
 
             }
