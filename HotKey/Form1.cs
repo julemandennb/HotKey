@@ -48,9 +48,14 @@ namespace WindowsFormsApp1
             while(isRunning)
             {
                 Thread.Sleep(40);
-                if((Keyboard.GetKeyStates(Key.E) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.X) & KeyStates.Down) > 0)
+                if((Keyboard.GetKeyStates(Key.S) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.U) & KeyStates.Down) > 0)
                 {
-                    this.musicPalyClass.Play();
+                    byte numberSonuder = this.keyNumber();
+
+                    if (numberSonuder != 10)
+                    {
+                        this.musicPalyClass.playSound(0, numberSonuder); 
+                    } 
                 }
                 else if((Keyboard.GetKeyStates(Key.W) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.E) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.B) & KeyStates.Down) > 0)
                 {
@@ -96,6 +101,54 @@ namespace WindowsFormsApp1
                 TH.SetApartmentState(ApartmentState.STA);
                 TH.Start();
             }
+        }
+
+
+        private byte keyNumber()
+        {
+            if ((Keyboard.GetKeyStates(Key.D0) & KeyStates.Down) > 0)
+            {
+                return 0;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D1) & KeyStates.Down) > 0)
+            {
+                return 1;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D2) & KeyStates.Down) > 0)
+            {
+                return 2;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D3) & KeyStates.Down) > 0)
+            {
+                return 3;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D4) & KeyStates.Down) > 0)
+            {
+                return 4;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D5) & KeyStates.Down) > 0)
+            {
+                return 5;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D6) & KeyStates.Down) > 0)
+            {
+                return 6;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D7) & KeyStates.Down) > 0)
+            {
+                return 7;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D8) & KeyStates.Down) > 0)
+            {
+                return 8;
+            }
+            else if ((Keyboard.GetKeyStates(Key.D9) & KeyStates.Down) > 0)
+            {
+                return 9;
+            }
+
+
+            return 10;
         }
     }
 }

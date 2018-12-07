@@ -21,12 +21,12 @@ namespace musicPlayClass
 
         WaveOut output = null;
 
-        public void Play()
+        public void Play(byte number)
         {
             string assemblyPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\explosion.mp3";
 
 
-            string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\explosion.wav";
+            string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
 
 
             if (!File.Exists(_outPath_))
@@ -40,27 +40,31 @@ namespace musicPlayClass
                     }
                 }
             }
-        
-            // 0 == defulet
-            playSound(0, _outPath_);
 
         }
 
         /// <summary>
         /// play sound 
         /// </summary>
-        /// <param name="deviceNumber">device to play on</param>
+        /// <param name="deviceNumber">device to play on. 0  == defulet</param>
         /// <param name="path">path to file</param>
-        public void playSound(int deviceNumber , string path)
+        public void playSound(int deviceNumber , byte number)
         {
-            this.disposeWave();
+            try
+            {
+                this.disposeWave();
 
-            var waveReader = new NAudio.Wave.WaveFileReader(path);
-            var waveOut = new NAudio.Wave.WaveOut();
-            waveOut.DeviceNumber = deviceNumber;
-            output = waveOut;
-            output.Init(waveReader);
-            output.Play();
+                string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
+
+                var waveReader = new NAudio.Wave.WaveFileReader(path);
+                var waveOut = new NAudio.Wave.WaveOut();
+                waveOut.DeviceNumber = deviceNumber;
+                output = waveOut;
+                output.Init(waveReader);
+                output.Play();
+            }
+            catch
+            { }
         }
 
         /// <summary>
