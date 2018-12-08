@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using System.Threading;
 using musicPlayClass;
-
+using HotKey;
 
 namespace WindowsFormsApp1
 {
@@ -165,8 +165,9 @@ namespace WindowsFormsApp1
 
             }
 
+            SettingForm settingForm = new SettingForm();
 
-
+            settingForm.ShowDialog();
 
 
 
