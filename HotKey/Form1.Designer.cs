@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonPauseOrStart = new System.Windows.Forms.Button();
+            this.setting = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPauseOrStart
             // 
-            this.buttonPauseOrStart.Location = new System.Drawing.Point(30, 25);
+            this.buttonPauseOrStart.Location = new System.Drawing.Point(39, 51);
             this.buttonPauseOrStart.Name = "buttonPauseOrStart";
             this.buttonPauseOrStart.Size = new System.Drawing.Size(131, 102);
             this.buttonPauseOrStart.TabIndex = 0;
@@ -41,12 +43,25 @@
             this.buttonPauseOrStart.UseVisualStyleBackColor = true;
             this.buttonPauseOrStart.Click += new System.EventHandler(this.buttonPauseOrStart_Click);
             // 
+            // setting
+            // 
+            this.setting.BackgroundImage = global::HotKey.Properties.Resources.setting;
+            this.setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.setting.Location = new System.Drawing.Point(172, 12);
+            this.setting.Name = "setting";
+            this.setting.Size = new System.Drawing.Size(35, 24);
+            this.setting.TabIndex = 1;
+            this.setting.UseVisualStyleBackColor = true;
+            this.setting.Click += new System.EventHandler(this.setting_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 152);
+            this.ClientSize = new System.Drawing.Size(219, 190);
+            this.Controls.Add(this.setting);
             this.Controls.Add(this.buttonPauseOrStart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -59,6 +74,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonPauseOrStart;
+        private System.Windows.Forms.Button setting;
     }
 }
 

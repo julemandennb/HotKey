@@ -103,7 +103,10 @@ namespace WindowsFormsApp1
             }
         }
 
-
+        /// <summary>
+        /// all number on key not numpad
+        /// </summary>
+        /// <returns></returns>
         private byte keyNumber()
         {
             if ((Keyboard.GetKeyStates(Key.D0) & KeyStates.Down) > 0)
@@ -149,6 +152,24 @@ namespace WindowsFormsApp1
 
 
             return 10;
+        }
+
+        private void setting_Click(object sender, EventArgs e)
+        {
+            if (isRunning == true)
+            {
+                isRunning = false;
+                buttonPauseOrStart.Text = "Start";
+
+                TH.Abort();
+
+            }
+
+
+
+
+
+
         }
     }
 }

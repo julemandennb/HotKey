@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NAudio.Wave;
 using System.IO;
-
+using System.Windows.Forms;
 
 namespace musicPlayClass
 {
@@ -21,24 +21,31 @@ namespace musicPlayClass
 
         WaveOut output = null;
 
-        public void Play(byte number)
+        public void setNewSound(byte number)
         {
-            string assemblyPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\explosion.mp3";
-
-
-            string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
-
-
-            if (!File.Exists(_outPath_))
+            try
             {
+                string assemblyPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\explosion.mp3";
 
-                using (Mp3FileReader mp3 = new Mp3FileReader(assemblyPath))
+
+                string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
+
+
+                if (!File.Exists(_outPath_))
                 {
-                    using (WaveStream pcm = WaveFormatConversionStream.CreatePcmStream(mp3))
+
+                    using (Mp3FileReader mp3 = new Mp3FileReader(assemblyPath))
                     {
-                        WaveFileWriter.CreateWaveFile(_outPath_, pcm);
+                        using (WaveStream pcm = WaveFormatConversionStream.CreatePcmStream(mp3))
+                        {
+                            WaveFileWriter.CreateWaveFile(_outPath_, pcm);
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("error","error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -72,15 +79,19 @@ namespace musicPlayClass
         /// </summary>
         public void disposeWave()
         {
-            if (output != null)
+            try
             {
-                if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
+                if (output != null)
                 {
-                    output.Stop();
-                    output.Dispose();
-                    output = null;
+                    if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
+                    {
+                        output.Stop();
+                        output.Dispose();
+                        output = null;
+                    }
                 }
             }
+            catch { }
 
         }
 
