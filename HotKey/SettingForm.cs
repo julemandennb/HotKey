@@ -23,54 +23,119 @@ namespace HotKey
             this.musicPalyClass = new musicPalyClass();
         }
 
-        private void button0play_Click(object sender, EventArgs e)
+
+        private void buttonplay_Click(object sender, EventArgs e)
         {
-            this.musicPalyClass.playSound(0, 0);
+            byte num = this.getButtonID(sender);
+
+
+            if(num != 11)
+            {
+                this.musicPalyClass.playSound(0, num);
+            }
+            else
+            {
+                MessageBox.Show("Cannot find button", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
-        private void button9play_Click(object sender, EventArgs e)
+        private void buttonChange_Click(object sender, EventArgs e)
         {
-            this.musicPalyClass.playSound(0, 9);
+
+
+            byte num = this.getButtonID(sender);
+
+            if (num != 11)
+            {
+
+
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "mp3 Files|*.mp3";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+                        
+
+
+
+
+
+
+
+
+
+
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cannot find button", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
-        private void button8play_Click(object sender, EventArgs e)
+        private byte getButtonID(object sender)
         {
-            this.musicPalyClass.playSound(0, 8);
+            Button button = (Button)sender;
+            string buttonId = button.Name;
+
+            byte num = 11;
+
+            switch (buttonId)
+            {
+                case "button1play":
+                case "buttonChange1":
+                    num = 1;
+                    break;
+                case "button2play":
+                case "buttonChange2":
+                    num = 2;
+                    break;
+                case "button3play":
+                case "buttonChange3":
+                    num = 3;
+                    break;
+                case "button4play":
+                case "buttonChange4":
+                    num = 4;
+                    break;
+                case "button5play":
+                case "buttonChange5":
+                    num = 5;
+                    break;
+                case "button6play":
+                case "buttonChange6":
+                    num = 6;
+                    break;
+                case "button7play":
+                case "buttonChange7":
+                    num = 7;
+                    break;
+                case "button8play":
+                case "buttonChange8":
+                    num = 8;
+                    break;
+                case "button9play":
+                case "buttonChange9":
+                    num = 9;
+                    break;
+                case "button0play":
+                case "buttonChange0":
+                    num = 0;
+                    break;
+
+                default:
+                    num = 11;
+                    break;
+            }
+
+
+            return num;
         }
 
-        private void button7play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 7);
-        }
 
-        private void button6play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 6);
-        }
-
-        private void button5play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 5);
-        }
-
-        private void button4play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 4);
-        }
-
-        private void button3play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 3);
-        }
-
-        private void button2play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 2);
-        }
-
-        private void button1play_Click(object sender, EventArgs e)
-        {
-            this.musicPalyClass.playSound(0, 1);
-        }
     }
 }
