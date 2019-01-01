@@ -23,7 +23,11 @@ namespace HotKey
             this.musicPalyClass = new musicPalyClass();
         }
 
-
+        /// <summary>
+        /// to play music on this key you click on 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonplay_Click(object sender, EventArgs e)
         {
             byte num = this.getButtonID(sender);
@@ -40,6 +44,11 @@ namespace HotKey
             
         }
 
+        /// <summary>
+        /// to change music on key you hav click on
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonChange_Click(object sender, EventArgs e)
         {
 
@@ -56,11 +65,11 @@ namespace HotKey
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
-                        
 
 
 
 
+                    this.musicPalyClass.setNewSound(num, filePath);
 
 
 
@@ -77,6 +86,11 @@ namespace HotKey
 
         }
 
+        /// <summary>
+        /// to get number of button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <returns></returns>
         private byte getButtonID(object sender)
         {
             Button button = (Button)sender;

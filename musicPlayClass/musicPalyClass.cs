@@ -20,19 +20,23 @@ namespace musicPlayClass
 
 
         WaveOut output = null;
-
-        public void setNewSound(byte number)
+        /// <summary>
+        /// to add or set a new Sound to system 
+        /// </summary>
+        /// <param name="number">number to key new Sound set to</param>
+        /// <param name="path">path to Sound </param>
+        public void setNewSound(byte number,string path)
         {
             try
             {
-                string assemblyPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\explosion.mp3";
+                string assemblyPath = path;
 
 
                 string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
 
 
-                if (!File.Exists(_outPath_))
-                {
+                //if (!File.Exists(_outPath_))
+                //{
 
                     using (Mp3FileReader mp3 = new Mp3FileReader(assemblyPath))
                     {
@@ -41,7 +45,7 @@ namespace musicPlayClass
                             WaveFileWriter.CreateWaveFile(_outPath_, pcm);
                         }
                     }
-                }
+                //}
             }
             catch
             {
