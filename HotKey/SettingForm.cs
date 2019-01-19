@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using musicPlayClass;
 
+
 namespace HotKey
 {
     public partial class SettingForm : Form
     {
+
+        private List<string> deviceList;
 
         private musicPalyClass musicPalyClass;
 
@@ -21,6 +24,26 @@ namespace HotKey
             InitializeComponent();
 
             this.musicPalyClass = new musicPalyClass();
+
+
+            this.deviceList = this.musicPalyClass.getOutPut();
+
+            int number = 0;
+            foreach (string device in this.deviceList)
+            {
+                ComboboxItem item = new ComboboxItem(device, number);
+
+                comboBoxDevice.Items.Add(item);
+
+                if (device == "Højttalere (3- SteelSeries Siberia 840)")
+                    comboBoxDevice.SelectedIndex = number;
+
+                    number++;
+
+                
+
+            }
+
         }
 
         /// <summary>
@@ -150,6 +173,22 @@ namespace HotKey
             return num;
         }
 
-
+        
     }
+
+    public class ComboboxItem
+    {
+        public string Text { get; set; }
+        public object Value { get; set; }
+
+
+        public ComboboxItem(string Text, object Value)
+        {
+            this.Text = Text;
+            this.Value = Value;
+
+        }
+    }
+
+
 }

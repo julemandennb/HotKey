@@ -7,6 +7,8 @@ using NAudio.Wave;
 using System.IO;
 using System.Windows.Forms;
 
+using Accord.DirectSound;
+
 namespace musicPlayClass
 {
     public class musicPalyClass
@@ -15,7 +17,7 @@ namespace musicPlayClass
 
         public musicPalyClass()
         {
-
+            this.getOutPut();
         }
 
 
@@ -97,6 +99,27 @@ namespace musicPlayClass
             }
             catch { }
 
+        }
+
+
+
+
+        public List<string> getOutPut()
+        {
+            var collection = new AudioDeviceCollection(AudioDeviceCategory.Output);
+
+            List<string> deviceList = new List<string>();
+
+            foreach (var device in collection)
+            {
+
+                deviceList.Add(device.ToString());
+              
+            }
+
+
+
+            return deviceList;
         }
 
 
