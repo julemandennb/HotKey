@@ -96,6 +96,10 @@
       <Project>{a198d225-5631-4c48-9e2f-ea6be1f3ab1f}</Project>
       <Name>musicPlayClass</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SaveAndLoad\SaveAndLoad.csproj">
+      <Project>{8dfe81c8-3014-48ae-bb74-482f9b915986}</Project>
+      <Name>SaveAndLoad</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resource\img\key.ico">

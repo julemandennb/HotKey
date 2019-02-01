@@ -19,6 +19,8 @@ namespace HotKey
 
         private musicPalyClass musicPalyClass;
 
+        public int deviceToPlayOn = 0;
+
         public SettingForm()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace HotKey
             int number = 0;
             foreach (string device in this.deviceList)
             {
+
                 ComboboxItem item = new ComboboxItem(device, number);
 
                 comboBoxDevice.Items.Add(item);
@@ -43,6 +46,7 @@ namespace HotKey
                 
 
             }
+
 
         }
 
@@ -58,7 +62,7 @@ namespace HotKey
 
             if(num != 11)
             {
-                this.musicPalyClass.playSound(0, num);
+                this.musicPalyClass.playSound(this.deviceToPlayOn, num);
             }
             else
             {
@@ -173,20 +177,32 @@ namespace HotKey
             return num;
         }
 
-        
+        private void comboBoxDevice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            ComboboxItem ComboboxItemObj = comboBoxDevice.SelectedItem as ComboboxItem;
+
+            this.deviceToPlayOn = ComboboxItemObj.Value;
+
+        }
     }
 
     public class ComboboxItem
     {
         public string Text { get; set; }
-        public object Value { get; set; }
+        public int Value { get; set; }
 
 
-        public ComboboxItem(string Text, object Value)
+        public ComboboxItem(string Text, int Value)
         {
             this.Text = Text;
             this.Value = Value;
 
+        }
+
+        public override string ToString()
+        {
+            return Text;
         }
     }
 

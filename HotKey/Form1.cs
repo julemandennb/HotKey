@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Threading;
 using musicPlayClass;
 using HotKey;
+using SaveAndLoad;
 
 namespace WindowsFormsApp1
 {
@@ -24,6 +25,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             this.musicPalyClass = new musicPalyClass();
+
+            new SaveAndLoad.Load();
+            
+
         }
 
         bool isRunning = true;

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotKey", "HotKey\HotKey.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "musicPlayClass", "musicPlayClass\musicPlayClass.csproj", "{A198D225-5631-4C48-9E2F-EA6BE1F3AB1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveAndLoad", "SaveAndLoad\SaveAndLoad.csproj", "{8DFE81C8-3014-48AE-BB74-482F9B915986}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A198D225-5631-4C48-9E2F-EA6BE1F3AB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A198D225-5631-4C48-9E2F-EA6BE1F3AB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A198D225-5631-4C48-9E2F-EA6BE1F3AB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFE81C8-3014-48AE-BB74-482F9B915986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFE81C8-3014-48AE-BB74-482F9B915986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFE81C8-3014-48AE-BB74-482F9B915986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFE81C8-3014-48AE-BB74-482F9B915986}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

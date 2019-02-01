@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxDevice = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonChange0 = new System.Windows.Forms.Button();
             this.buttonChange5 = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.button3play = new System.Windows.Forms.Button();
             this.button6play = new System.Windows.Forms.Button();
             this.button4play = new System.Windows.Forms.Button();
-            this.comboBoxDevice = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,6 +68,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sound";
+            // 
+            // comboBoxDevice
+            // 
+            this.comboBoxDevice.FormattingEnabled = true;
+            this.comboBoxDevice.Location = new System.Drawing.Point(16, 141);
+            this.comboBoxDevice.Name = "comboBoxDevice";
+            this.comboBoxDevice.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxDevice.TabIndex = 1;
+            this.comboBoxDevice.SelectedIndexChanged += new System.EventHandler(this.comboBoxDevice_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -306,14 +315,6 @@
             this.button4play.Text = "4 play";
             this.button4play.UseVisualStyleBackColor = true;
             this.button4play.Click += new System.EventHandler(this.buttonplay_Click);
-            // 
-            // comboBoxDevice
-            // 
-            this.comboBoxDevice.FormattingEnabled = true;
-            this.comboBoxDevice.Location = new System.Drawing.Point(16, 141);
-            this.comboBoxDevice.Name = "comboBoxDevice";
-            this.comboBoxDevice.Size = new System.Drawing.Size(156, 21);
-            this.comboBoxDevice.TabIndex = 1;
             // 
             // SettingForm
             // 

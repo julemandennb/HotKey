@@ -110,8 +110,14 @@ namespace musicPlayClass
 
             List<string> deviceList = new List<string>();
 
+            bool first = true;
+
             foreach (var device in collection)
             {
+                if(first)
+                { first = false;
+                    continue;
+                }
 
                 deviceList.Add(device.ToString());
               
