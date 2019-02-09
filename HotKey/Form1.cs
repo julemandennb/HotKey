@@ -20,13 +20,13 @@ namespace WindowsFormsApp1
 
         private musicPalyClass musicPalyClass;
 
+        private UserData userData;
+
         public Form1()
         {
             InitializeComponent();
 
             this.musicPalyClass = new musicPalyClass();
-
-            new SaveAndLoad.Load();
             
 
         }

@@ -7,19 +7,13 @@ using System.IO;
 
 namespace SaveAndLoad
 {
-    public class Load
+    internal class Load : SaveAndLoad
     {
 
-        private string pathstr = "";
 
-        public Load()
+
+        internal Load()
         {
-
-            this.pathstr = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\HotKey";
-            if (!Directory.Exists(this.pathstr))
-            {
-                Directory.CreateDirectory(this.pathstr);
-            }
 
 
         }
