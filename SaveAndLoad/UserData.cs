@@ -9,18 +9,15 @@ namespace SaveAndLoad
     public class UserData
     {
 
-        private string deviceName;
-        private byte deviceNumber;
+        private string deviceNumber;
 
         public UserData()
         {
-            this.deviceName = "";
-            this.deviceNumber = 0;
+            this.deviceNumber = "00000000-0000-0000-0000-000000000000";
         }
 
 
-        public string deviceNameSetGet { get { return this.deviceName; } set { this.deviceName = value; } }
-        public byte deviceNumberSetGet { get { return this.deviceNumber; } set { if (value >= 0) { this.deviceNumber = value; } } }
+        public string deviceNumberSetGet { get { return this.deviceNumber; } set { if (value !="") { this.deviceNumber = value; } } }
 
 
     }

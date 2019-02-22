@@ -15,7 +15,7 @@ namespace HotKey
     public partial class SettingForm : Form
     {
 
-        private List<string> deviceList;
+        private List<deviceName> deviceList;
 
         private musicPalyClass musicPalyClass;
 
@@ -28,17 +28,17 @@ namespace HotKey
             this.musicPalyClass = new musicPalyClass();
 
 
-            this.deviceList = this.musicPalyClass.getOutPut();
+            this.deviceList = this.musicPalyClass.getOutPutList();
 
             int number = 0;
-            foreach (string device in this.deviceList)
+            foreach (deviceName device in this.deviceList)
             {
 
-                ComboboxItem item = new ComboboxItem(device, number);
+                ComboboxItem item = new ComboboxItem(device.name, number);
 
                 comboBoxDevice.Items.Add(item);
 
-                if (device == "Højttalere (3- SteelSeries Siberia 840)")
+                if (device.Guid == "181204cc-02d6-4597-915a-da268421795c")
                     comboBoxDevice.SelectedIndex = number;
 
                     number++;

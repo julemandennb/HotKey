@@ -17,7 +17,7 @@ namespace musicPlayClass
 
         public musicPalyClass()
         {
-            this.getOutPut();
+
         }
 
 
@@ -104,11 +104,11 @@ namespace musicPlayClass
 
 
 
-        public List<string> getOutPut()
+        public List<deviceName> getOutPutList()
         {
             var collection = new AudioDeviceCollection(AudioDeviceCategory.Output);
 
-            List<string> deviceList = new List<string>();
+            List<deviceName> deviceList = new List<deviceName>();
 
             bool first = true;
 
@@ -119,7 +119,8 @@ namespace musicPlayClass
                     continue;
                 }
 
-                deviceList.Add(device.ToString());
+
+                deviceList.Add(new deviceName(device.Guid.ToString(), device.ToString()));
               
             }
 
@@ -129,5 +130,41 @@ namespace musicPlayClass
         }
 
 
+        public int getOutPut(string Guid)
+        {
+            var collection = new AudioDeviceCollection(AudioDeviceCategory.Output).ToList();
+
+
+            return collection.FindIndex(device => device.Guid.ToString() == Guid);
+        }
+
+
+
+
     }
+}
+
+
+
+
+
+
+
+public class deviceName
+{
+   public string name { get; private set; }
+
+   public string Guid { get; private set; }
+
+
+
+
+    public deviceName(string Guid,string name)
+    {
+        this.name = name;
+        this.Guid = Guid;
+    }
+
+
+
 }
