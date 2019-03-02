@@ -33,8 +33,8 @@ namespace musicPlayClass
             {
                 string assemblyPath = path;
 
-
-                string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
+                string _outPath_ = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\HotKey\\sounder\\Sound" + number + ".wav";
+               // string _outPath_ = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
 
 
                 //if (!File.Exists(_outPath_))
@@ -67,7 +67,7 @@ namespace musicPlayClass
             {
                 this.disposeWave();
 
-                string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Resource\sounder\Sound" + number + ".wav";
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\HotKey\\sounder\\Sound" + number + ".wav";
 
                 var waveReader = new NAudio.Wave.WaveFileReader(path);
                 var waveOut = new NAudio.Wave.WaveOut();

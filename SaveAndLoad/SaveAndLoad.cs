@@ -8,16 +8,18 @@ using SaveAndLoad;
 
 namespace SaveAndLoad
 {
-    public class SaveAndLoad
+    public class SaveAndLoadClass
     {
         protected string pathstr = "";
 
-        public SaveAndLoad()
+        public SaveAndLoadClass()
         {
             this.pathstr = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\HotKey";
             if (!Directory.Exists(this.pathstr))
             {
                 Directory.CreateDirectory(this.pathstr);
+                Directory.CreateDirectory(this.pathstr+ "/sounder");
+                new Save().SaveUser(new UserData());
             }
 
 
@@ -29,7 +31,14 @@ namespace SaveAndLoad
         {
             UserData userData = new UserData();
 
+            userData = new Load().GetUser();
+
             return userData;
+        }
+
+        public void save(UserData userData)
+        {
+            new Save().SaveUser(userData);
         }
 
 

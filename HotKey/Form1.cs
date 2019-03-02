@@ -22,10 +22,13 @@ namespace WindowsFormsApp1
 
         private UserData userData;
 
+        public SaveAndLoadClass saveAndLoad;
+
         public Form1()
         {
             InitializeComponent();
 
+            this.userData = new SaveAndLoadClass().load();
             this.musicPalyClass = new musicPalyClass();
             
 

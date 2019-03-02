@@ -9,7 +9,7 @@ namespace SaveAndLoad
     public class UserData
     {
 
-        private string deviceNumber;
+        public string deviceNumber;
 
         public UserData()
         {
@@ -17,7 +17,7 @@ namespace SaveAndLoad
         }
 
 
-        public string deviceNumberSetGet { get { return this.deviceNumber; } set { if (value !="") { this.deviceNumber = value; } } }
+       
 
 
     }

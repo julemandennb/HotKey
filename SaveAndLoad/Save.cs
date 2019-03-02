@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace SaveAndLoad
 {
-    internal class Save : SaveAndLoad
+    internal class Save : SaveAndLoadClass
     {
 
 
@@ -15,6 +16,14 @@ namespace SaveAndLoad
         {
 
 
+        }
+
+
+        internal void SaveUser(UserData userData)
+        {
+            string JSON = JsonConvert.SerializeObject(userData);
+
+            File.WriteAllText(this.pathstr + "\\UserData.txt", JSON);
         }
 
 
