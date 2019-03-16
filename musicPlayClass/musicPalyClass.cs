@@ -102,8 +102,10 @@ namespace musicPlayClass
         }
 
 
-
-
+        /// <summary>
+        /// get a list of all device
+        /// </summary>
+        /// <returns>list device</returns>
         public List<deviceName> getOutPutList()
         {
             var collection = new AudioDeviceCollection(AudioDeviceCategory.Output);
@@ -123,19 +125,35 @@ namespace musicPlayClass
                 deviceList.Add(new deviceName(device.Guid.ToString(), device.ToString()));
               
             }
-
-
-
             return deviceList;
         }
 
-
+        /// <summary>
+        /// get Index for list
+        /// </summary>
+        /// <param name="Guid">device id</param>
+        /// <returns>Index from list</returns>
         public int getOutPut(string Guid)
         {
             var collection = new AudioDeviceCollection(AudioDeviceCategory.Output).ToList();
 
+            collection.RemoveAt(0);
 
             return collection.FindIndex(device => device.Guid.ToString() == Guid);
+        }
+
+        /// <summary>
+        /// get device id
+        /// </summary>
+        /// <param name="deviceToPlayOn">Index from list</param>
+        /// <returns>device id</returns>
+        public string getOutPutGuid(int deviceToPlayOn)
+        {
+            var collection = new AudioDeviceCollection(AudioDeviceCategory.Output).ToList();
+
+            collection.RemoveAt(0);
+
+            return collection[deviceToPlayOn].Guid.ToString();
         }
 
 

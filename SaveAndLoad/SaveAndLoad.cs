@@ -21,9 +21,6 @@ namespace SaveAndLoad
                 Directory.CreateDirectory(this.pathstr+ "/sounder");
                 new Save().SaveUser(new UserData());
             }
-
-
-
         }
 
 

@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using musicPlayClass;
-
+using SaveAndLoad;
 
 namespace HotKey
 {
     public partial class SettingForm : Form
     {
+        public UserData userData;
 
         private List<deviceName> deviceList;
 
@@ -21,9 +22,11 @@ namespace HotKey
 
         public int deviceToPlayOn = 0;
 
-        public SettingForm()
+        public SettingForm(UserData userData)
         {
             InitializeComponent();
+
+            this.userData = userData;
 
             this.musicPalyClass = new musicPalyClass();
 
@@ -38,7 +41,7 @@ namespace HotKey
 
                 comboBoxDevice.Items.Add(item);
 
-                if (device.Guid == "181204cc-02d6-4597-915a-da268421795c")
+                if (device.Guid == this.userData.deviceNumber)
                     comboBoxDevice.SelectedIndex = number;
 
                     number++;
@@ -183,6 +186,22 @@ namespace HotKey
             ComboboxItem ComboboxItemObj = comboBoxDevice.SelectedItem as ComboboxItem;
 
             this.deviceToPlayOn = ComboboxItemObj.Value;
+
+        }
+
+        private void SettingForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+
+            this.userData.deviceNumber = this.musicPalyClass.getOutPutGuid(this.deviceToPlayOn);
+
+
+
+
+
+
+
+
 
         }
     }

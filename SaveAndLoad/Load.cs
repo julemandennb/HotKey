@@ -23,19 +23,8 @@ namespace SaveAndLoad
             using (StreamReader r = new StreamReader(this.pathstr+"\\UserData.txt"))
             {
                 string json = r.ReadToEnd();
-                dynamic stuff = JsonConvert.DeserializeObject<dynamic>(json);
-
-
-
-
-                userData.deviceNumber = stuff.deviceNumber;
-
+                userData = JsonConvert.DeserializeObject<UserData>(json);
             }
-
-
-
-
-
 
             return userData;
         }

@@ -24,19 +24,26 @@ namespace WindowsFormsApp1
 
         public SaveAndLoadClass saveAndLoad;
 
+        private int device;
+
+
+
+        bool isRunning = true;
+
+        private Thread TH;
+
         public Form1()
         {
             InitializeComponent();
 
-            this.userData = new SaveAndLoadClass().load();
+            this.saveAndLoad = new SaveAndLoadClass();
+            this.userData = this.saveAndLoad.load();
             this.musicPalyClass = new musicPalyClass();
-            
 
+            this.device = this.musicPalyClass.getOutPut(this.userData.deviceNumber);
         }
 
-        bool isRunning = true;
-
-        public Thread TH;
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -62,14 +69,9 @@ namespace WindowsFormsApp1
 
                     if (numberSonuder != 10)
                     {
-                        this.musicPalyClass.playSound(0, numberSonuder); 
+                        this.musicPalyClass.playSound(this.device, numberSonuder); 
                     } 
                 }
-                else if((Keyboard.GetKeyStates(Key.W) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.E) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.B) & KeyStates.Down) > 0)
-                {
-                    System.Diagnostics.Process.Start("http://google.com");
-                }
-
             }
         }
 
@@ -173,11 +175,12 @@ namespace WindowsFormsApp1
 
             }
 
-            SettingForm settingForm = new SettingForm();
+            SettingForm settingForm = new SettingForm(this.userData);
 
             settingForm.ShowDialog();
 
 
+            this.saveAndLoad.save(this.userData);
 
         }
     }
