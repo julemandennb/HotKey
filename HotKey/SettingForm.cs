@@ -192,16 +192,7 @@ namespace HotKey
         private void SettingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-
             this.userData.deviceNumber = this.musicPalyClass.getOutPutGuid(this.deviceToPlayOn);
-
-
-
-
-
-
-
-
 
         }
     }

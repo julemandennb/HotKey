@@ -12,9 +12,14 @@ namespace SaveAndLoad
     {
         protected string pathstr = "";
 
+        /// <summary>
+        /// make to call save and load
+        /// </summary>
         public SaveAndLoadClass()
         {
+            //get paht to fold to save and load for
             this.pathstr = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\HotKey";
+            //if fold is not make, make fold and sounder fold and new profil
             if (!Directory.Exists(this.pathstr))
             {
                 Directory.CreateDirectory(this.pathstr);
@@ -23,7 +28,10 @@ namespace SaveAndLoad
             }
         }
 
-
+        /// <summary>
+        /// to get profil from fold
+        /// </summary>
+        /// <returns></returns>
         public UserData load()
         {
             UserData userData = new UserData();
@@ -33,6 +41,10 @@ namespace SaveAndLoad
             return userData;
         }
 
+        /// <summary>
+        /// to save profil to fold
+        /// </summary>
+        /// <param name="userData"></param>
         public void save(UserData userData)
         {
             new Save().SaveUser(userData);

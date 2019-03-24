@@ -15,7 +15,10 @@ namespace SaveAndLoad
         {
             
         }
-
+        /// <summary>
+        /// to load txt file hav JSON str in to make UserData
+        /// </summary>
+        /// <returns>UserData</returns>
         internal UserData GetUser()
         {
             UserData userData = new UserData();

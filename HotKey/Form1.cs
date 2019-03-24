@@ -164,22 +164,31 @@ namespace WindowsFormsApp1
             return 10;
         }
 
+        /// <summary>
+        /// call setting form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void setting_Click(object sender, EventArgs e)
         {
+            //check if Keyboardd is on  
             if (isRunning == true)
             {
+                //if true set to false to not check key
                 isRunning = false;
+                //set button text 
                 buttonPauseOrStart.Text = "Start";
 
                 TH.Abort();
 
             }
-
+            //maek new from
             SettingForm settingForm = new SettingForm(this.userData);
 
+            //show new from 
             settingForm.ShowDialog();
 
-
+            //save new setting
             this.saveAndLoad.save(this.userData);
 
         }

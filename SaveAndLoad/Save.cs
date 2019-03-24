@@ -18,7 +18,10 @@ namespace SaveAndLoad
 
         }
 
-
+        /// <summary>
+        /// make userdata to JSON str and save to a txt file
+        /// </summary>
+        /// <param name="userData">user setting</param>
         internal void SaveUser(UserData userData)
         {
             string JSON = JsonConvert.SerializeObject(userData);
