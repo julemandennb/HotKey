@@ -53,9 +53,21 @@
             this.button3play = new System.Windows.Forms.Button();
             this.button6play = new System.Windows.Forms.Button();
             this.button4play = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.ChangeExeWeb0 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb1 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb9 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb2 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb8 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb3 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb7 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb4 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb6 = new System.Windows.Forms.Button();
+            this.ChangeExeWeb5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -65,7 +77,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(841, 216);
+            this.groupBox1.Size = new System.Drawing.Size(841, 176);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sound";
@@ -317,11 +329,131 @@
             this.button4play.UseVisualStyleBackColor = true;
             this.button4play.Click += new System.EventHandler(this.buttonplay_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.ChangeExeWeb0);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb1);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb9);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb2);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb8);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb3);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb7);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb4);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb6);
+            this.groupBox4.Controls.Add(this.ChangeExeWeb5);
+            this.groupBox4.Location = new System.Drawing.Point(0, 182);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(841, 100);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "OpenExeWeb";
+            // 
+            // ChangeExeWeb0
+            // 
+            this.ChangeExeWeb0.Location = new System.Drawing.Point(745, 32);
+            this.ChangeExeWeb0.Name = "ChangeExeWeb0";
+            this.ChangeExeWeb0.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb0.TabIndex = 11;
+            this.ChangeExeWeb0.Text = "Change 0";
+            this.ChangeExeWeb0.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb0.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb1
+            // 
+            this.ChangeExeWeb1.Location = new System.Drawing.Point(16, 32);
+            this.ChangeExeWeb1.Name = "ChangeExeWeb1";
+            this.ChangeExeWeb1.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb1.TabIndex = 2;
+            this.ChangeExeWeb1.Text = "Change 1";
+            this.ChangeExeWeb1.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb1.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb9
+            // 
+            this.ChangeExeWeb9.Location = new System.Drawing.Point(664, 32);
+            this.ChangeExeWeb9.Name = "ChangeExeWeb9";
+            this.ChangeExeWeb9.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb9.TabIndex = 10;
+            this.ChangeExeWeb9.Text = "Change 9";
+            this.ChangeExeWeb9.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb9.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb2
+            // 
+            this.ChangeExeWeb2.Location = new System.Drawing.Point(97, 32);
+            this.ChangeExeWeb2.Name = "ChangeExeWeb2";
+            this.ChangeExeWeb2.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb2.TabIndex = 3;
+            this.ChangeExeWeb2.Text = "Change 2";
+            this.ChangeExeWeb2.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb2.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb8
+            // 
+            this.ChangeExeWeb8.Location = new System.Drawing.Point(583, 32);
+            this.ChangeExeWeb8.Name = "ChangeExeWeb8";
+            this.ChangeExeWeb8.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb8.TabIndex = 9;
+            this.ChangeExeWeb8.Text = "Change 8";
+            this.ChangeExeWeb8.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb8.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb3
+            // 
+            this.ChangeExeWeb3.Location = new System.Drawing.Point(178, 32);
+            this.ChangeExeWeb3.Name = "ChangeExeWeb3";
+            this.ChangeExeWeb3.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb3.TabIndex = 4;
+            this.ChangeExeWeb3.Text = "Change 3";
+            this.ChangeExeWeb3.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb3.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb7
+            // 
+            this.ChangeExeWeb7.Location = new System.Drawing.Point(502, 32);
+            this.ChangeExeWeb7.Name = "ChangeExeWeb7";
+            this.ChangeExeWeb7.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb7.TabIndex = 8;
+            this.ChangeExeWeb7.Text = "Change 7";
+            this.ChangeExeWeb7.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb7.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb4
+            // 
+            this.ChangeExeWeb4.Location = new System.Drawing.Point(259, 32);
+            this.ChangeExeWeb4.Name = "ChangeExeWeb4";
+            this.ChangeExeWeb4.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb4.TabIndex = 5;
+            this.ChangeExeWeb4.Text = "Change 4";
+            this.ChangeExeWeb4.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb4.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb6
+            // 
+            this.ChangeExeWeb6.Location = new System.Drawing.Point(421, 32);
+            this.ChangeExeWeb6.Name = "ChangeExeWeb6";
+            this.ChangeExeWeb6.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb6.TabIndex = 7;
+            this.ChangeExeWeb6.Text = "Change 6";
+            this.ChangeExeWeb6.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb6.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
+            // ChangeExeWeb5
+            // 
+            this.ChangeExeWeb5.Location = new System.Drawing.Point(340, 32);
+            this.ChangeExeWeb5.Name = "ChangeExeWeb5";
+            this.ChangeExeWeb5.Size = new System.Drawing.Size(75, 23);
+            this.ChangeExeWeb5.TabIndex = 6;
+            this.ChangeExeWeb5.Text = "Change 5";
+            this.ChangeExeWeb5.UseVisualStyleBackColor = true;
+            this.ChangeExeWeb5.Click += new System.EventHandler(this.ButtonExeWeb_Click);
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 450);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingForm";
@@ -330,6 +462,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,5 +493,16 @@
         private System.Windows.Forms.Button buttonChange6;
         private System.Windows.Forms.Button buttonChange4;
         private System.Windows.Forms.ComboBox comboBoxDevice;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button ChangeExeWeb0;
+        private System.Windows.Forms.Button ChangeExeWeb1;
+        private System.Windows.Forms.Button ChangeExeWeb9;
+        private System.Windows.Forms.Button ChangeExeWeb2;
+        private System.Windows.Forms.Button ChangeExeWeb8;
+        private System.Windows.Forms.Button ChangeExeWeb3;
+        private System.Windows.Forms.Button ChangeExeWeb7;
+        private System.Windows.Forms.Button ChangeExeWeb4;
+        private System.Windows.Forms.Button ChangeExeWeb6;
+        private System.Windows.Forms.Button ChangeExeWeb5;
     }
 }

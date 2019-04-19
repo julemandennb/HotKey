@@ -132,42 +132,52 @@ namespace HotKey
             {
                 case "button1play":
                 case "buttonChange1":
+                case "ChangeExeWeb1":
                     num = 1;
                     break;
                 case "button2play":
                 case "buttonChange2":
+                case "ChangeExeWeb2":
                     num = 2;
                     break;
                 case "button3play":
                 case "buttonChange3":
+                case "ChangeExeWeb3":
                     num = 3;
                     break;
                 case "button4play":
                 case "buttonChange4":
+                case "ChangeExeWeb4":
                     num = 4;
                     break;
                 case "button5play":
                 case "buttonChange5":
+                case "ChangeExeWeb5":
                     num = 5;
                     break;
                 case "button6play":
                 case "buttonChange6":
+                case "ChangeExeWeb6":
                     num = 6;
                     break;
                 case "button7play":
                 case "buttonChange7":
+                case "ChangeExeWeb7":
                     num = 7;
                     break;
                 case "button8play":
                 case "buttonChange8":
+                case "ChangeExeWeb8":
                     num = 8;
                     break;
                 case "button9play":
                 case "buttonChange9":
+                case "ChangeExeWeb9":
                     num = 9;
                     break;
                 case "button0play":
                 case "buttonChange0":
+                case "ChangeExeWeb0":
                     num = 0;
                     break;
 
@@ -195,7 +205,56 @@ namespace HotKey
             this.userData.deviceNumber = this.musicPalyClass.getOutPutGuid(this.deviceToPlayOn);
 
         }
+
+
+        private void ButtonExeWeb_Click(object sender, EventArgs e)
+        {
+            byte num = this.getButtonID(sender);
+
+
+            if (num != 11)
+            {
+
+
+
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Exe file|*.exe;*.bat;*.cmd";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Cannot find button", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public class ComboboxItem
     {
