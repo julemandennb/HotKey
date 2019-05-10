@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveAndLoad", "SaveAndLoad\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenExeWeb", "OpenExeWeb\OpenExeWeb.csproj", "{49057E61-A4BE-442B-8E4A-172AF5DA3FFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "objectClass", "objectClass\objectClass.csproj", "{98737642-91C4-4DD0-B8B0-23FF936DE846}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{49057E61-A4BE-442B-8E4A-172AF5DA3FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49057E61-A4BE-442B-8E4A-172AF5DA3FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49057E61-A4BE-442B-8E4A-172AF5DA3FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98737642-91C4-4DD0-B8B0-23FF936DE846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98737642-91C4-4DD0-B8B0-23FF936DE846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98737642-91C4-4DD0-B8B0-23FF936DE846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98737642-91C4-4DD0-B8B0-23FF936DE846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

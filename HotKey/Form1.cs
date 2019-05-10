@@ -12,6 +12,7 @@ using System.Threading;
 using musicPlayClass;
 using HotKey;
 using SaveAndLoad;
+using objectClass;
 
 namespace WindowsFormsApp1
 {

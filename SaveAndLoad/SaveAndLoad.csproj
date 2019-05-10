@@ -48,10 +48,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Save.cs" />
     <Compile Include="SaveAndLoad.cs" />
-    <Compile Include="UserData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\objectClass\objectClass.csproj">
+      <Project>{98737642-91c4-4dd0-b8b0-23ff936de846}</Project>
+      <Name>objectClass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

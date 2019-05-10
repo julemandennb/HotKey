@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -95,6 +96,10 @@
     <ProjectReference Include="..\musicPlayClass\musicPlayClass.csproj">
       <Project>{a198d225-5631-4c48-9e2f-ea6be1f3ab1f}</Project>
       <Name>musicPlayClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\objectClass\objectClass.csproj">
+      <Project>{98737642-91c4-4dd0-b8b0-23ff936de846}</Project>
+      <Name>objectClass</Name>
     </ProjectReference>
     <ProjectReference Include="..\SaveAndLoad\SaveAndLoad.csproj">
       <Project>{8dfe81c8-3014-48ae-bb74-482f9b915986}</Project>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49057E61-A4BE-442B-8E4A-172AF5DA3FFE}</ProjectGuid>
+    <ProjectGuid>{98737642-91C4-4DD0-B8B0-23FF936DE846}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenExeWeb</RootNamespace>
-    <AssemblyName>OpenExeWeb</AssemblyName>
+    <RootNamespace>objectClass</RootNamespace>
+    <AssemblyName>objectClass</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SetNewFileOrWeb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\objectClass\objectClass.csproj">
-      <Project>{98737642-91c4-4dd0-b8b0-23ff936de846}</Project>
-      <Name>objectClass</Name>
-    </ProjectReference>
+    <Compile Include="UserData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

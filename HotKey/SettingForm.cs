@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using musicPlayClass;
 using SaveAndLoad;
+using Microsoft.VisualBasic;
+using objectClass;
 
 namespace HotKey
 {
@@ -217,13 +219,23 @@ namespace HotKey
 
 
 
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Exe file|*.exe;*.bat;*.cmd";
+                DialogResult dialogResult = MessageBox.Show("Yes to add exe paht, no to add webside, Cancel to Cancel", "add path", MessageBoxButtons.YesNoCancel);
 
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                if (dialogResult == DialogResult.Yes)
                 {
-                    string filePath = openFileDialog.FileName;
 
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Exe file|*.exe;*.bat;*.cmd";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                   string url = Interaction.InputBox("Url to side ure one to open", "Url");
                 }
 
             }
