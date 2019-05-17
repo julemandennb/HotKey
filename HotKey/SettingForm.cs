@@ -11,6 +11,7 @@ using musicPlayClass;
 using SaveAndLoad;
 using Microsoft.VisualBasic;
 using objectClass;
+using OpenExeWeb;
 
 namespace HotKey
 {
@@ -217,26 +218,10 @@ namespace HotKey
             if (num != 11)
             {
 
+                FormEXEWeb formEXEWeb = new FormEXEWeb("");
+                formEXEWeb.ShowDialog();
 
 
-                DialogResult dialogResult = MessageBox.Show("Yes to add exe paht, no to add webside, Cancel to Cancel", "add path", MessageBoxButtons.YesNoCancel);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Exe file|*.exe;*.bat;*.cmd";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                    }
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                   string url = Interaction.InputBox("Url to side ure one to open", "Url");
-                }
 
             }
             else

@@ -101,6 +101,10 @@
       <Project>{98737642-91c4-4dd0-b8b0-23ff936de846}</Project>
       <Name>objectClass</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenExeWeb\OpenExeWeb.csproj">
+      <Project>{49057e61-a4be-442b-8e4a-172af5da3ffe}</Project>
+      <Name>OpenExeWeb</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SaveAndLoad\SaveAndLoad.csproj">
       <Project>{8dfe81c8-3014-48ae-bb74-482f9b915986}</Project>
       <Name>SaveAndLoad</Name>
