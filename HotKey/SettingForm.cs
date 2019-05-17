@@ -220,7 +220,7 @@ namespace HotKey
 
                 FormEXEWeb formEXEWeb = new FormEXEWeb("");
                 formEXEWeb.ShowDialog();
-
+                formEXEWeb.GetPath();
 
 
             }
