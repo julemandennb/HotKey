@@ -19,16 +19,21 @@ namespace OpenExeWeb
         private bool isCustom = true;
 
 
-        public FormEXEWeb(string path)
+        public FormEXEWeb()
         {
             InitializeComponent();
 
-            this.path = path;
+            this.path = "";
             this.textBoxUrlOrPaht.Text = path;
 
 
         }
 
+        /// <summary>
+        /// to open window folde box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonPaht_Click(object sender, EventArgs e)
         {
 
@@ -93,5 +98,22 @@ namespace OpenExeWeb
             }
             return newPaht;
         }
+
+
+
+        public void open()
+        {
+
+
+
+
+
+
+
+
+        }
+
+
+
     }
 }

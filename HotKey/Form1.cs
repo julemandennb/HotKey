@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using System.Threading;
 using musicPlayClass;
+using OpenExeWeb;
 using HotKey;
 using SaveAndLoad;
 using objectClass;
@@ -20,6 +21,8 @@ namespace WindowsFormsApp1
     {
 
         private musicPalyClass musicPalyClass;
+
+        private FormEXEWeb formEXEWeb;
 
         private UserData userData;
 
@@ -40,6 +43,7 @@ namespace WindowsFormsApp1
             this.saveAndLoad = new SaveAndLoadClass();
             this.userData = this.saveAndLoad.load();
             this.musicPalyClass = new musicPalyClass();
+            this.formEXEWeb = new FormEXEWeb();
 
             this.device = this.musicPalyClass.getOutPut(this.userData.deviceNumber);
         }
@@ -184,7 +188,7 @@ namespace WindowsFormsApp1
 
             }
             //maek new from
-            SettingForm settingForm = new SettingForm(this.userData);
+            SettingForm settingForm = new SettingForm(this.userData,this.musicPalyClass,this.formEXEWeb);
 
             //show new from 
             settingForm.ShowDialog();

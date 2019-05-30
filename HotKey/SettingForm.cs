@@ -23,15 +23,19 @@ namespace HotKey
 
         private musicPalyClass musicPalyClass;
 
+        private FormEXEWeb formEXEWeb;
+
         public int deviceToPlayOn = 0;
 
-        public SettingForm(UserData userData)
+        public SettingForm(UserData userData, musicPalyClass musicPalyClass, FormEXEWeb formEXEWeb)
         {
             InitializeComponent();
 
             this.userData = userData;
 
-            this.musicPalyClass = new musicPalyClass();
+            this.musicPalyClass = musicPalyClass;
+
+            this.formEXEWeb = formEXEWeb;
 
 
             this.deviceList = this.musicPalyClass.getOutPutList();
@@ -218,9 +222,9 @@ namespace HotKey
             if (num != 11)
             {
 
-                FormEXEWeb formEXEWeb = new FormEXEWeb("");
+                FormEXEWeb formEXEWeb = new FormEXEWeb();
                 formEXEWeb.ShowDialog();
-                formEXEWeb.GetPath();
+                userData.openEXEOrWebPathSetNewPahtRight(num, formEXEWeb.GetPath());
 
 
             }
