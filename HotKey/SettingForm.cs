@@ -23,11 +23,11 @@ namespace HotKey
 
         private musicPalyClass musicPalyClass;
 
-        private FormEXEWeb formEXEWeb;
+        private SetNewFileOrWeb setNewFileOrWeb;
 
         public int deviceToPlayOn = 0;
 
-        public SettingForm(UserData userData, musicPalyClass musicPalyClass, FormEXEWeb formEXEWeb)
+        public SettingForm(UserData userData, musicPalyClass musicPalyClass, SetNewFileOrWeb setNewFileOrWeb)
         {
             InitializeComponent();
 
@@ -35,7 +35,7 @@ namespace HotKey
 
             this.musicPalyClass = musicPalyClass;
 
-            this.formEXEWeb = formEXEWeb;
+            this.setNewFileOrWeb = setNewFileOrWeb;
 
 
             this.deviceList = this.musicPalyClass.getOutPutList();
@@ -197,6 +197,11 @@ namespace HotKey
             return num;
         }
 
+        /// <summary>
+        /// to set a new id on play musick 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBoxDevice_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -206,6 +211,11 @@ namespace HotKey
 
         }
 
+        /// <summary>
+        /// to updata user data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SettingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -213,7 +223,11 @@ namespace HotKey
 
         }
 
-
+        /// <summary>
+        /// to open a new poppu box to user can type a url to file or web 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonExeWeb_Click(object sender, EventArgs e)
         {
             byte num = this.getButtonID(sender);
@@ -222,9 +236,11 @@ namespace HotKey
             if (num != 11)
             {
 
-                FormEXEWeb formEXEWeb = new FormEXEWeb();
+                FormEXEWeb formEXEWeb = new FormEXEWeb(this.setNewFileOrWeb);
                 formEXEWeb.ShowDialog();
                 userData.openEXEOrWebPathSetNewPahtRight(num, formEXEWeb.GetPath());
+
+               
 
 
             }

@@ -26,6 +26,22 @@ namespace OpenExeWeb
 
 
 
+        /// <summary>
+        /// to open file or web side
+        /// </summary>
+        /// <param name="num">num in array</param>
+        public void open(byte num = 0)
+        {
+
+
+
+
+
+
+
+
+        }
+
 
 
 

@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
 
         private musicPalyClass musicPalyClass;
 
-        private FormEXEWeb formEXEWeb;
+        private SetNewFileOrWeb setNewFileOrWeb;
 
         private UserData userData;
 
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             this.saveAndLoad = new SaveAndLoadClass();
             this.userData = this.saveAndLoad.load();
             this.musicPalyClass = new musicPalyClass();
-            this.formEXEWeb = new FormEXEWeb();
+            this.setNewFileOrWeb = new SetNewFileOrWeb(this.userData);
 
             this.device = this.musicPalyClass.getOutPut(this.userData.deviceNumber);
         }
@@ -76,6 +76,15 @@ namespace WindowsFormsApp1
                     {
                         this.musicPalyClass.playSound(this.device, numberSonuder); 
                     } 
+                }
+                else if ((Keyboard.GetKeyStates(Key.O) & KeyStates.Down) > 0 && (Keyboard.GetKeyStates(Key.P) & KeyStates.Down) > 0)
+                {
+                    byte numberSonuder = this.keyNumber();
+
+                    if (numberSonuder != 10)
+                    {
+                        this.setNewFileOrWeb.open(numberSonuder);
+                    }
                 }
             }
         }
@@ -188,7 +197,7 @@ namespace WindowsFormsApp1
 
             }
             //maek new from
-            SettingForm settingForm = new SettingForm(this.userData,this.musicPalyClass,this.formEXEWeb);
+            SettingForm settingForm = new SettingForm(this.userData,this.musicPalyClass,this.setNewFileOrWeb);
 
             //show new from 
             settingForm.ShowDialog();

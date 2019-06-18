@@ -17,9 +17,10 @@ namespace OpenExeWeb
 
         public string path;
         private bool isCustom = true;
+        public SetNewFileOrWeb setNewFileOrWeb;
 
 
-        public FormEXEWeb()
+        public FormEXEWeb(SetNewFileOrWeb setNewFileOrWeb)
         {
             InitializeComponent();
 
@@ -100,17 +101,12 @@ namespace OpenExeWeb
         }
 
 
-
+        /// <summary>
+        /// to open mabye use or not
+        /// </summary>
         public void open()
         {
-
-
-
-
-
-
-
-
+            this.open();
         }
 
 
