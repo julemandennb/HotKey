@@ -45,7 +45,6 @@ namespace OpenExeWeb
             {
                 this.path = openFileDialog.FileName;
                 this.textBoxUrlOrPaht.Text = this.path;
-                this.isCustom = false;
 
             }
 
@@ -100,16 +99,9 @@ namespace OpenExeWeb
             return newPaht;
         }
 
-
-        /// <summary>
-        /// to open mabye use or not
-        /// </summary>
-        public void open()
+        private void textBoxUrlOrPaht_TextChanged(object sender, EventArgs e)
         {
-            this.open();
+            this.path = this.textBoxUrlOrPaht.Text;
         }
-
-
-
     }
 }

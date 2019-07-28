@@ -39,6 +39,8 @@ namespace SaveAndLoad
 
             userData = new Load().GetUser();
 
+            userData = this.checkUserData(userData);
+
             return userData;
         }
 
@@ -51,7 +53,21 @@ namespace SaveAndLoad
             new Save().SaveUser(userData);
         }
 
+        /// <summary>
+        /// to check if all val is right
+        /// </summary>
+        /// <param name="userData"></param>
+        /// <returns></returns>
+        private UserData checkUserData(UserData userData)
+        {
+            if(userData.openEXEOrWebPath.Length < 10)
+            {
+                userData.openEXEOrWebPath = new string[10];
+            }
 
+
+            return userData;
+        }
 
 
 

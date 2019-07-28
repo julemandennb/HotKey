@@ -40,6 +40,7 @@
             this.textBoxUrlOrPaht.Name = "textBoxUrlOrPaht";
             this.textBoxUrlOrPaht.Size = new System.Drawing.Size(555, 20);
             this.textBoxUrlOrPaht.TabIndex = 0;
+            this.textBoxUrlOrPaht.TextChanged += new System.EventHandler(this.textBoxUrlOrPaht_TextChanged);
             // 
             // buttonPaht
             // 
