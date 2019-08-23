@@ -8,6 +8,7 @@ namespace objectClass
 {
     public class UserData
     {
+        public bool StartOnWin;
 
         public string deviceNumber;
 
@@ -15,6 +16,7 @@ namespace objectClass
 
         public UserData()
         {
+            this.StartOnWin = false;
             this.deviceNumber = "00000000-0000-0000-0000-000000000000";
             this.openEXEOrWebPath = new string[10];
         }

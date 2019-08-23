@@ -37,6 +37,7 @@ namespace HotKey
 
             this.setNewFileOrWeb = setNewFileOrWeb;
 
+            this.checkBoxsSartup.Checked = this.userData.StartOnWin;
 
             this.deviceList = this.musicPalyClass.getOutPutList();
 
@@ -251,10 +252,10 @@ namespace HotKey
 
         }
 
-
-
-
-
+        private void checkBoxsSartup_CheckedChanged(object sender, EventArgs e)
+        {
+            this.userData.StartOnWin = this.checkBoxsSartup.Checked;
+        }
     }
 
 

@@ -64,10 +64,17 @@
             this.ChangeExeWeb4 = new System.Windows.Forms.Button();
             this.ChangeExeWeb6 = new System.Windows.Forms.Button();
             this.ChangeExeWeb5 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageSimpel = new System.Windows.Forms.TabPage();
+            this.tabPageAD = new System.Windows.Forms.TabPage();
+            this.checkBoxsSartup = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPageSimpel.SuspendLayout();
+            this.tabPageAD.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -75,7 +82,7 @@
             this.groupBox1.Controls.Add(this.comboBoxDevice);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(841, 176);
             this.groupBox1.TabIndex = 0;
@@ -341,7 +348,7 @@
             this.groupBox4.Controls.Add(this.ChangeExeWeb4);
             this.groupBox4.Controls.Add(this.ChangeExeWeb6);
             this.groupBox4.Controls.Add(this.ChangeExeWeb5);
-            this.groupBox4.Location = new System.Drawing.Point(0, 182);
+            this.groupBox4.Location = new System.Drawing.Point(6, 188);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(841, 100);
             this.groupBox4.TabIndex = 1;
@@ -448,14 +455,59 @@
             this.ChangeExeWeb5.UseVisualStyleBackColor = true;
             this.ChangeExeWeb5.Click += new System.EventHandler(this.ButtonExeWeb_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPageSimpel);
+            this.tabControl1.Controls.Add(this.tabPageAD);
+            this.tabControl1.Location = new System.Drawing.Point(-2, 1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(848, 451);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPageSimpel
+            // 
+            this.tabPageSimpel.Controls.Add(this.groupBox1);
+            this.tabPageSimpel.Controls.Add(this.groupBox4);
+            this.tabPageSimpel.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSimpel.Name = "tabPageSimpel";
+            this.tabPageSimpel.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSimpel.Size = new System.Drawing.Size(840, 425);
+            this.tabPageSimpel.TabIndex = 0;
+            this.tabPageSimpel.Text = "simpel";
+            this.tabPageSimpel.UseVisualStyleBackColor = true;
+            // 
+            // tabPageAD
+            // 
+            this.tabPageAD.Controls.Add(this.checkBoxsSartup);
+            this.tabPageAD.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAD.Name = "tabPageAD";
+            this.tabPageAD.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAD.Size = new System.Drawing.Size(840, 425);
+            this.tabPageAD.TabIndex = 1;
+            this.tabPageAD.Text = "AD";
+            this.tabPageAD.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxsSartup
+            // 
+            this.checkBoxsSartup.AutoSize = true;
+            this.checkBoxsSartup.Location = new System.Drawing.Point(6, 22);
+            this.checkBoxsSartup.Name = "checkBoxsSartup";
+            this.checkBoxsSartup.Size = new System.Drawing.Size(116, 17);
+            this.checkBoxsSartup.TabIndex = 0;
+            this.checkBoxsSartup.Text = "Startup on pc start ";
+            this.checkBoxsSartup.UseVisualStyleBackColor = true;
+            this.checkBoxsSartup.CheckedChanged += new System.EventHandler(this.checkBoxsSartup_CheckedChanged);
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 450);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SettingForm";
             this.Text = "SettingForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingForm_FormClosing);
@@ -463,6 +515,10 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPageSimpel.ResumeLayout(false);
+            this.tabPageAD.ResumeLayout(false);
+            this.tabPageAD.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -504,5 +560,9 @@
         private System.Windows.Forms.Button ChangeExeWeb4;
         private System.Windows.Forms.Button ChangeExeWeb6;
         private System.Windows.Forms.Button ChangeExeWeb5;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPageSimpel;
+        private System.Windows.Forms.TabPage tabPageAD;
+        private System.Windows.Forms.CheckBox checkBoxsSartup;
     }
 }

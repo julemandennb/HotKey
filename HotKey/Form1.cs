@@ -64,7 +64,6 @@ namespace WindowsFormsApp1
         /// </summary>
         void Keyboardd()
         {
-            
             while(isRunning)
             {
                 Thread.Sleep(40);
@@ -207,4 +206,8 @@ namespace WindowsFormsApp1
 
         }
     }
+
+
+
 }
+
